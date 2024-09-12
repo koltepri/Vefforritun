@@ -1,0 +1,185 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Almennt */
+
+/** Letur og stærðir **/
+html {
+  font-size: 16px;
+
+}
+
+/*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
+@font-face {
+  font-family: 'Matemasie';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Matemasie-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal; 
+  font-weight: 400;
+  src: url("./fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: url("./fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+/*** Allt meginmál notar open sans ***/
+html,
+input,
+select,
+button {
+  /* TODO Skilgreina */
+	font-family: 'Open Sans'
+}
+
+/*** Allar fyrirsagnir nota Matemasie regular ***/
+h1,
+h2,
+h3,
+legend {
+  /* TODO Skilgreina */
+	font-family: 'Matemasie'
+}
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/**
+ * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
+ * Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
+ * sem grunn og án breytinga.
+ * Athugið að til þess að þetta virki þar að setja <div class="wrapper"> utan um allt efni 
+ * innan <body>.
+ */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+
+  max-width: 900px; 
+  margin: auto; /* allt i miðju */
+  margin-bottom: 1rem; /* eitt bil fyrir nedan */
+
+  background-color: #f3dd99;
+}
+
+.wrapper main {
+  flex: 1;
+}
+
+header {
+	background-color: #cc99bb;
+	text-align: center;
+	padding: 1rem;
+}
+
+nav {
+	background-color: #eebbdd;
+	border: 4px #cc99bb; /* solid? */
+	text-align: center;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+
+/** Meginmál og efni forsíðu **/
+
+main {
+	background-color: #f3dd99;
+  /* TODO Skilgreina */ }
+img#m1 {
+	border-radius: 20px;
+	float: right; 
+	margin 1rem 0 1rem 0;
+	max-width: 40%;
+	max-height: 40%;
+}
+
+footer {
+	background-color: #eebbdd;
+	border: 4px #cc99bb;
+	margin-top: 1rem;
+}
+
+footer > section {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+/* TODO Skilgreina aðra selectora fyrir fót */
+
+/** Spilasíða, töflustílar **/
+
+table {
+	border-radius: 5px; 
+}
+
+tr:nth-child(odd) {
+	background-color: #eebbdd;
+}
+
+/* TODO Skilgreina aðra selectora fyrir töflu */
+
+/** Viðburðir **/
+main.vidburdir > img {
+	float: left;
+	width: 20%;
+} 
+
+.event {
+  /* TODO Skilgreina, gerum ráð fyrir að hver viðburður hafi eigin selector */
+}
+
+/* TODO Skilgreina aðra selectora fyrir viðburði */
+
+/** Skráningarform **/
+
+/* TODO Skilgreina */
